@@ -16,11 +16,32 @@ html,body{
     background-color:rgb(169,189,206);
     width:100%;
 }
+.top-pic{
+    position:absolute;
+    width:40px;
+    height:40px;
+    border-radius: 10px;
+    left:15px;
+    top:15px;
+    font-size:25px;
+    color:white;
+    background-color: brown;
+}
+.top-text{
+    position: relative;
+    font-size:12px;
+    left:60px;
+    top:15px;
+    color:rgb(74,76,78);
+    font-family:'Malgun Gothic';
+}
 #chat{
     position: absolute;
     top:73px;
     width:100%;
-   overflow: hidden;
+   overflow-y: scroll;
+   overflow-x: hidden;
+   height:calc(100% - 73px - 106px);
 }
 
 .new-login{
@@ -34,6 +55,37 @@ html,body{
    width : calc(100% - 14px); /* for IE */
     background-color:rgb(169,189,206);
     height:30px;
+}
+.chat-mine{
+    right:25px;
+    width:100%;
+    position: relative;
+    text-align: right;
+    padding-bottom:13px;
+
+}
+.chat-mine .msg-box{
+    padding:7px 7px 7px 7px;
+    background-color:rgb(255,235,51);
+    box-shadow: 0px 1px 2px 0px rgba(70,70,70,0.6);
+    border-radius:3px;
+    font-size:12px;
+
+}
+.chat-others{
+    left:25px;
+    width:100%;
+    position: relative;
+    padding-bottom:13px;
+
+}
+.chat-others .msg-box{
+    padding:7px 7px 7px 7px;
+    background-color:#fff;
+    box-shadow: 0px 1px 2px 0px rgba(70,70,70,0.6);
+    border-radius:3px;
+    font-size:12px;
+
 }
 .bottom{
     width:100%;
