@@ -8,7 +8,7 @@ var io = require('socket.io')(server);
 var port=process.env.PORT || 5000;
 
 
-app.use('/static',express.static("public"));
+
 app.use(express.static("css")); 
 // connection event handler.
 
