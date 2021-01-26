@@ -106,6 +106,7 @@ html,body{
     width : calc(100% - 86px); /* for IE */
     border: none;
     resize: none;
+    color:rgb(38,38,38);
 
 }
 .btn-submit{
