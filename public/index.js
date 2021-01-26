@@ -1,16 +1,21 @@
-var app = require('express')();
+var express= require('express');
+var app = express();
+
+
 var server = require('http').createServer(app);
 // http server를 socket.io server로 upgrade한다
 var io = require('socket.io')(server);
 var port=process.env.PORT || 5000;
 
+
+app.use('/static',express.static("public"));
+app.use(express.static("css")); 
+// connection event handler.
+
 // localhost:3000으로 서버에 접속하면 클라이언트로 index.html을 전송한다
 app.get('/', function(req, res) {
   res.sendFile(__dirname + '/index.html');
 });
-
-// connection event handler.
-
 // connection이 수립되면 event handler function의 인자로 socket인 들어온다
 io.on('connection', function(socket) {
 
