@@ -49,6 +49,11 @@ function enterCheck() {
   if (event.keyCode == 13 && textSpace != "\n") {
     sendChat();
   }
+  else if(event.keyCode==13&&textSpace=="\n"){
+   $(".text-space").val("");
+    $(".btn-submit").css("cursor", "auto");
+    $(".btn-submit").css("color", "rgb(189,176,58)");
+  }
 }
 
 
