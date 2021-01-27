@@ -11,9 +11,9 @@ var port=process.env.PORT || 5000;
 
 app.use(express.static("css")); 
 app.use(express.static("js"));
-// connection event handler.
 
-// localhost:3000으로 서버에 접속하면 클라이언트로 index.html을 전송한다
+
+// localhost:5000으로 서버에 접속하면 클라이언트로 index.html을 전송한다
 app.get('/', function(req, res) {
   res.sendFile(__dirname + '/index.html');
 });
@@ -34,8 +34,6 @@ io.on('connection', function(socket) {
 
   // 클라이언트로부터의 메시지가 수신되면
   socket.on('chat', function(data) {
-    console.log('Message from %s: %s', socket.name, data.msg);
-
     var msg = {
       from: {
         name: socket.name,

@@ -18,8 +18,9 @@
     <div id="chat"> 
     </div> 
     <div class="bottom">
-        <textarea class="text-space" maxlength="300"  onkeyup="enterCheck()" ></textarea>
-        <button type=button" class="btn-submit" onclick="sendChat()">전송</button>
+      <form class="form">
+        <textarea class="text-space" maxlength="300"  onkeyup="btnActived()" onkeypress="enterCheck()" ></textarea>
+        <button type="submit" class="btn-submit">전송</button>
       </form>
     </div>
   </div>

@@ -108,6 +108,7 @@ html,body{
     resize: none;
     color:rgb(38,38,38);
 
+
 }
 .btn-submit{
     position:absolute;
@@ -117,9 +118,8 @@ html,body{
     height:28px;
     background-color: rgb(255, 236, 66);
     border:1px solid rgb(232, 215, 63);
-    color:rgb(77,54,54);
-    cursor:pointer;
     font-size:12px;
+    color:rgb(189,176,58);/*ㅇㅇㅇ*/
 }
 
 /* 텍스트에이리어 클릭시 영역테두리 지우기   */
